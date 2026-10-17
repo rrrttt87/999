@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>一点米 · 专业打印机维修服务</title><style>
+/* ========== 一点米打印机维修 · 全局样式 ========== */:root{--primary:#2563eb;/* 主色 蓝 */ --primary-dark:#1d4ed8;--accent:#f59e0b;/* 强调 橙 */ --bg:#f5f7fb;--card:#ffffff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb;--success:#16a34a;--warning:#d97706;--danger:#dc2626;--radius:12px;--shadow:0 4px 16px rgba(15,23,42,.08);}*{box-sizing:border-box;margin:0;padding:0;}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}a{color:var(--primary);text-decoration:none;}a:hover{text-decoration:underline;}/* ---------- 导航 ---------- */ .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:var(--card);box-shadow:var(--shadow);position:sticky;top:0;z-index:10;}.nav .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--text);}.nav .brand .logo{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;display:grid;place-items:center;font-size:20px;}.nav .links{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}.nav .links a{color:var(--text);font-weight:500;}.nav .phone{background:var(--accent);color:#fff !important;padding:8px 16px;border-radius:999px;font-weight:700;}/* ---------- 容器 ---------- */ .container{max-width:1080px;margin:0 auto;padding:24px;}.page{padding:32px 0 64px;}/* ---------- Hero ---------- */ .hero{background:linear-gradient(135deg,var(--primary),#3b82f6);color:#fff;border-radius:var(--radius);padding:56px 40px;margin-bottom:32px;}.hero h1{font-size:34px;margin-bottom:12px;}.hero p{font-size:17px;opacity:.95;max-width:620px;}.hero .cta{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;}.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;cursor:pointer;border:none;font-size:15px;transition:transform .08s ease,box-shadow .2s ease;}.btn:active{transform:translateY(1px);}.btn-primary{background:var(--primary);color:#fff;}.btn-primary:hover{background:var(--primary-dark);text-decoration:none;}.btn-light{background:#fff;color:var(--primary);}.btn-light:hover{text-decoration:none;}.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.6);color:#fff;}.btn-ghost:hover{background:rgba(255,255,255,.12);text-decoration:none;}.btn-sm{padding:8px 14px;font-size:14px;}.btn-danger{background:var(--danger);color:#fff;}.btn-success{background:var(--success);color:#fff;}.btn-success:hover{background:#15803d;text-decoration:none;}/* ---------- 卡片网格 ---------- */ .grid{display:grid;gap:20px;}.grid-3{grid-template-columns:repeat(3,1fr);}.grid-2{grid-template-columns:repeat(2,1fr);}.card{background:var(--card);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);}.card h3{font-size:18px;margin-bottom:8px;}.card .ico{font-size:30px;margin-bottom:10px;}.section-title{font-size:24px;font-weight:800;margin:36px 0 18px;}.muted{color:var(--muted);}/* ---------- 流程 ---------- */ .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}.step{background:var(--card);border-radius:var(--radius);padding:20px;text-align:center;box-shadow:var(--shadow);}.step .num{width:40px;height:40px;margin:0 auto 10px;border-radius:50%;background:var(--primary);color:#fff;display:grid;place-items:center;font-weight:800;}/* ---------- 表单 ---------- */ .form-card{max-width:640px;margin:0 auto;}.field{margin-bottom:16px;}.field label{display:block;font-weight:600;margin-bottom:6px;font-size:14px;}.field input,.field select,.field textarea{width:100%;padding:11px 14px;border:1px solid var(--border);border-radius:10px;font-size:15px;font-family:inherit;background:#fff;color:var(--text);}.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(37,99,235,.12);}.field textarea{resize:vertical;min-height:90px;}.row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}/* ---------- 表格 ---------- */ .table-wrap{overflow-x:auto;border-radius:var(--radius);box-shadow:var(--shadow);background:#fff;}table{width:100%;border-collapse:collapse;font-size:14px;min-width:720px;}th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border);}th{background:#f1f5f9;font-weight:700;white-space:nowrap;}tr:last-child td{border-bottom:none;}.tag{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700;}.tag-pending{background:#fef3c7;color:var(--warning);}.tag-assigned{background:#dcfce7;color:var(--success);}.tag-done{background:#e0e7ff;color:var(--primary);}/* ---------- 提示 ---------- */ .alert{padding:12px 16px;border-radius:10px;margin-bottom:16px;font-size:14px;}.alert-info{background:#e0f2fe;color:#0369a1;}.alert-success{background:#dcfce7;color:#166534;}.alert-error{background:#fee2e2;color:#991b1b;}/* ---------- 顶部条 ---------- */ .topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px;}.topbar h2{font-size:22px;}/* ---------- 联系 ---------- */ .contact-box{background:var(--card);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);text-align:center;}.contact-box .big-phone{font-size:30px;font-weight:800;color:var(--primary);}/* ---------- 页脚 ---------- */ .footer{text-align:center;padding:28px 16px;color:var(--muted);font-size:14px;}/* ---------- 空状态 ---------- */ .empty{text-align:center;color:var(--muted);padding:40px;}/* ---------- 响应式 ---------- */ @media (max-width:860px){.grid-3{grid-template-columns:1fr;}.grid-2{grid-template-columns:1fr;}.steps{grid-template-columns:repeat(2,1fr);}.hero{padding:40px 24px;}.hero h1{font-size:26px;}.nav .links{gap:12px;}.row-2{grid-template-columns:1fr;}}@media (max-width:480px){.steps{grid-template-columns:1fr;}.nav .brand{font-size:17px;}.container{padding:16px;}}
+</style>
+</head>
+<body>
+  <!-- 导航 -->
+  <nav class="nav">
+    <div class="brand">
+      <span class="logo">米</span>
+      <span>一点米</span>
+    </div>
+    <div class="links">
+      <a href="#services">服务项目</a>
+      <a href="#process">维修流程</a>
+      <a href="#contact">联系我们</a>
+      <a href="worker.html">工人登录</a>
+      <a href="admin.html">管理后台</a>
+      <a class="phone" href="tel:18537186299">☎ 18537186299</a>
+    </div>
+  </nav>
+
+  <div class="container page">
+    <!-- Hero -->
+    <section class="hero">
+      <h1>一点米打印机维修 · 上门快修更省心</h1>
+      <p>专注打印机、复印机、传真机故障诊断与维修，涵盖卡纸、不进纸、打印偏色、无法连接、耗材更换等常见问题。专业师傅上门，修不好不收费。</p>
+      <div class="cta">
+        <a class="btn btn-light" href="tel:18537186299">立即预约维修</a>
+        <a class="btn btn-ghost" href="worker.html">维修师傅登录接单</a>
+      </div>
+    </section>
+
+    <!-- 服务项目 -->
+    <h2 class="section-title" id="services">我们的服务</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="ico">🔧</div>
+        <h3>故障上门维修</h3>
+        <p class="muted">卡纸、不进纸、异响、报错代码等硬件故障，师傅上门检测维修。</p>
+      </div>
+      <div class="card">
+        <div class="ico">🖨️</div>
+        <h3>打印质量问题</h3>
+        <p class="muted">偏色、条纹、模糊、重影等，清洁定影与喷头，校准色彩。</p>
+      </div>
+      <div class="card">
+        <div class="ico">🔌</div>
+        <h3>连接与驱动</h3>
+        <p class="muted">WiFi/网络打印配置、驱动安装、共享打印调试。</p>
+      </div>
+      <div class="card">
+        <div class="ico">🧰</div>
+        <h3>耗材更换</h3>
+        <p class="muted">硒鼓、墨盒、碳粉、搓纸轮等原装/兼容耗材供应与更换。</p>
+      </div>
+      <div class="card">
+        <div class="ico">🛡️</div>
+        <h3>保养与检测</h3>
+        <p class="muted">定期清洁保养，延长设备寿命，降低故障率。</p>
+      </div>
+      <div class="card">
+        <div class="ico">🏢</div>
+        <h3>企业驻场</h3>
+        <p class="muted">为企业提供长期维保合约与驻场服务，响应更及时。</p>
+      </div>
+    </div>
+
+    <!-- 维修流程 -->
+    <h2 class="section-title" id="process">维修流程</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><strong>客户报修</strong><p class="muted">拨打 18537186299 登记故障信息</p></div>
+      <div class="step"><div class="num">2</div><strong>管理员派单</strong><p class="muted">后台选工人、定维修时间派单</p></div>
+      <div class="step"><div class="num">3</div><strong>工人接单处理</strong><p class="muted">师傅登录查看派单，完成后划掉</p></div>
+      <div class="step"><div class="num">4</div><strong>上门维修</strong><p class="muted">按时上门维修，修复验收质保</p></div>
+    </div>
+
+    <!-- 联系我们 -->
+    <h2 class="section-title" id="contact">联系我们</h2>
+    <div class="contact-box">
+      <p class="muted">有任何打印机故障，欢迎随时联系我们</p>
+      <div class="big-phone"><a href="tel:18537186299">18537186299</a></div>
+      <p class="muted" style="margin-top:8px;">服务时间：每日 8:00 - 20:00 · 全城上门</p>
+      <p style="margin-top:14px;"><a class="btn btn-primary" href="worker.html">维修师傅登录接单 →</a></p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    © 一点米打印机维修服务 · 服务热线 18537186299
+  </footer>
+</body>
+</html>
